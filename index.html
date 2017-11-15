@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>¯\_(ツ)_/¯</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="NPL1270018">
+    <meta name="description" content="">
+
+    <link type="text/css" rel="stylesheet" href="css/stylesheet.css">
+    <link type="text/css" rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+    <script type="text/javascript" src="js/jquery-2.2.2.min.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header"><span id="header-time"></span></div>
+        <script type="text/javascript">
+            var dt = new Date();
+            minute = "" + dt.getMinutes(); if (minute.length == 1) { minute = "0" + minute; }
+            second = "" + dt.getSeconds(); if (second.length == 1) { second = "0" + second; }
+            var time = dt.getHours() + ":" + minute + ":" + second;
+
+            $("#header-time").text(time);
+
+            setInterval(function(){
+                dt = new Date();
+                minute = "" + dt.getMinutes(); if (minute.length == 1) { minute = "0" + minute; }
+                second = "" + dt.getSeconds(); if (second.length == 1) { second = "0" + second; }
+                time = dt.getHours() + ":" + minute + ":" + second;
+                console.log(time);
+                $("#header-time").text(time);
+
+            },1000);
+        </script>
+        <div class="search-row">
+            <input id="search-field" type="text" name="search-field" onkeypress="return search(event)" autofocus="true"/>
+            <script type="text/javascript">
+            function search(e) {
+                if (e.keyCode == 13) {
+                    var val = $("#search-field").val();
+                    window.location = "https://duckduckgo.com/?q=" + val + "&kp=1&kl=de-de&kh=1&kg=p&k5=1&kae=d&k1=-1";
+                    return false;
+                }
+            }
+            </script>
+        </div>
+        <div class="terminal-con">
+            <div class="terminal-row ext-top">
+                <div class="terminal-label"><span class="hl-gray">---------------------------------------------------</span></div>
+            </div>
+            <div class="terminal-row">
+                <div class="terminal-label i1"><span class="hl-gray">Last login: </span></div>
+                <div id="time"></div>
+                <script type="text/javascript">
+                    var dt = new Date();
+                    var time = dt.getDate() + "." + dt.getMonth() + "." + dt.getFullYear() + " " + dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+
+                    $("#time").text(time);
+
+                    setInterval(function(){
+                        dt = new Date();
+                        time = dt.getDate() + "." + dt.getMonth() + "." + dt.getFullYear() + " " + dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+                        console.log(time);
+                        $("#time").text(time);
+
+                    },1000);
+                </script>
+            </div>
+            <div class="terminal-row">
+                <div class="terminal-label i1"><span class="hl-gray">Welcome to your <span class="hl-blue">Intel(R) Core(TM) i7-5557U CPU @ 3.10GHz  Darwin 16.7.0 x86_64</span>.</span></div>
+            </div>
+            <div class="terminal-row">
+                <div class="terminal-label"><span class="hl-gray">---------------------------------------------------</span></div>
+            </div>
+            <div class="terminal-row">
+                <div class="terminal-label"><span><span class="hl-yellow">ras02@AMRL2QH1Q8FVH8</span><span class="hl-blue"> > /usr/local/bin </span><span class="hl-gray">./startpage.sh</span></span></div>
+            </div>
+            <div class="terminal-innerCon">
+                <div class="favCon">
+                    <div class="favCon-header">
+                        <span>personal</span>
+                    </div>
+                    <div class="favCon-body">
+                        <a href="https://gmail.com" onfocus="if(this.blur)this.blur()">
+                            <div class="favCon-el">
+                                <div class="favCon-el-content">
+                                    <span>gmail</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="http://github.com/stephenra" onfocus="if(this.blur)this.blur()">
+                            <div class="favCon-el">
+                                <div class="favCon-el-content">
+                                    <span>github</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://calendar.google.com/calendar/" onfocus="if(this.blur)this.blur()">
+                            <div class="favCon-el">
+                                <div class="favCon-el-content">
+                                    <span>calendar</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://drive.google.com/drive/my-drive" onfocus="if(this.blur)this.blur()">
+                            <div class="favCon-el">
+                                <div class="favCon-el-content">
+                                    <span>drive</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://linkedin.com" onfocus="if(this.blur)this.blur()">
+                            <div class="favCon-el">
+                                <div class="favCon-el-content">
+                                    <span>linkedin</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://twitter.com" onfocus="if(this.blur)this.blur()">
+                            <div class="favCon-el">
+                                <div class="favCon-el-content">
+                                    <span>twitter</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://grubhub.com" onfocus="if(this.blur)this.blur()">
+                            <div class="favCon-el">
+                                <div class="favCon-el-content">
+                                    <span>grubhub</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="favCon">
+                    <div class="favCon-header">
+                        <span>info</span>
+                    </div>
+                    <div class="favCon-body">
+                        <a href="https://nytimes.com" onfocus="if(this.blur)this.blur()">
+                            <div class="favCon-el">
+                                <div class="favCon-el-content">
+                                    <span>nyt</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://npr.org" onfocus="if(this.blur)this.blur()">
+                            <div class="favCon-el">
+                                <div class="favCon-el-content">
+                                    <span>npr</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://pbs.org/newshour/" onfocus="if(this.blur)this.blur()">
+                            <div class="favCon-el">
+                                <div class="favCon-el-content">
+                                    <span>pbs</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://theguardian.com" onfocus="if(this.blur)this.blur()">
+                            <div class="favCon-el">
+                                <div class="favCon-el-content">
+                                    <span>guardian</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://news.ycombinator.com" onfocus="if(this.blur)this.blur()">
+                            <div class="favCon-el">
+                                <div class="favCon-el-content">
+                                    <span>hacker news</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://reddit.com/r/machinelearning" onfocus="if(this.blur)this.blur()">
+                            <div class="favCon-el">
+                                <div class="favCon-el-content">
+                                    <span>/r/machinelearning</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="favCon">
+                    <div class="favCon-header">
+                        <span>work</span>
+                    </div>
+                    <div class="favCon-body">
+                        <a href="https://devfederate.pfizer.com/idp/startSSO.ping?PartnerSpId=urn:amazon:webservices" onfocus="if(this.blur)this.blur()">
+                            <div class="favCon-el">
+                                <div class="favCon-el-content">
+                                    <span>aws</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="http://confluence.pfizer.com" onfocus="if(this.blur)this.blur()">
+                            <div class="favCon-el">
+                                <div class="favCon-el-content">
+                                    <span>confluence</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://10.192.71.220:3000/" onfocus="if(this.blur)this.blur()">
+                            <div class="favCon-el">
+                                <div class="favCon-el-content">
+                                    <span>grafana</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://amrvpce1a02169.pfizer.com:5601/" onfocus="if(this.blur)this.blur()">
+                            <div class="favCon-el">
+                                <div class="favCon-el-content">
+                                    <span>kibana</span>
+                                </div>
+                            </div>
+                        <a href="http://10.192.71.198:18080/" onfocus="if(this.blur)this.blur()">
+                            <div class="favCon-el">
+                                <div class="favCon-el-content">
+                                    <span>spark server</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://www.myworkday.com/pfizer/d/home.htmld" onfocus="if(this.blur)this.blur()">
+                            <div class="favCon-el">
+                                <div class="favCon-el-content">
+                                    <span>workday</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="terminal-row ext-btm">
+                <div class="terminal-label"><span><span class="hl-yellow">ras02@AMRL2QH1Q8FVH8</span><span class="hl-blue"> > /usr/local/bin </span><span class="hl-gray"></span></span></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
