@@ -1,0 +1,6 @@
+# Site settings
+title: Start
+description: Startpage
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+author: Stephen Ra
